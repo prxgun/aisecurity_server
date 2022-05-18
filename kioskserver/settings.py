@@ -91,7 +91,7 @@ ASGI_APPLICATION = 'api.sockets.application'
 
 
 
-database_config = os.environ['DATABASE_CONFIG'] if 'DATABASE_CONFIG' in os.environ else '/home/kiosk/kioskv3/kioskserver/my.cnf'
+database_config = os.environ['DATABASE_CONFIG'] if 'DATABASE_CONFIG' in os.environ else '/Users/pragunseth/Desktop/Coding/AI Club/aisecurity_server/my.cnf'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -105,9 +105,9 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'database name',
-        'USER': 'username',
-        'PASSWORD': 'password',
+        'NAME': 'kiosk_new',
+        'USER': 'root',
+        'PASSWORD': 'MyNewPass',
         'HOST': '127.0.0.1', 
         'PORT': '3306',
     }
