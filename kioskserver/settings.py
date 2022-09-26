@@ -90,7 +90,6 @@ ASGI_APPLICATION = 'api.sockets.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 
-
 database_config = os.environ['DATABASE_CONFIG'] if 'DATABASE_CONFIG' in os.environ else '/home/kiosk/kioskv3/kioskserver/my.cnf'
 DATABASES = {
     'default': {
@@ -105,11 +104,11 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'database name',
-        'USER': 'username',
-        'PASSWORD': 'password',
+        'NAME': 'KIOSK_NEW',
+        'USER': 'root',
+        'PASSWORD': 'newpassword',
         'HOST': '127.0.0.1', 
-        'PORT': '3306',
+        'PORT': '8000',
     }
 }
 '''
@@ -131,8 +130,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
 
 
 # Internationalization
@@ -161,3 +158,10 @@ STATICFILES_DIRS = [
 ]
 
 AUTH_USER_MODEL = "api.CustomUser"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'millburnkiosks@gmail.com'
+EMAIL_HOST_PASSWORD = 'Kiosk2025'
